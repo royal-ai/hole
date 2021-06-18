@@ -82,7 +82,7 @@ public class MoveBehaviour : GenericBehaviour
 				behaviourManager.GetRigidBody.AddForce(Vector3.up * velocity, ForceMode.VelocityChange);
 			}
 			if(behaviourManager.GetAnim.GetFloat(speedFloat) <= 0.001){ //原地跳
-				print(111);
+				//print(111);
 				behaviourManager.LockTempBehaviour(this.behaviourCode);
 				stateInfo = behaviourManager.GetAnim.GetCurrentAnimatorStateInfo(0);
 				bool stopSquat = false; //是否下蹲结束的临时变量

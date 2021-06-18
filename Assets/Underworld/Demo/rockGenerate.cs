@@ -37,15 +37,15 @@ public class rockGenerate : MonoBehaviour
             double cur_x = (sample*range)+x1;
             double sample2 = rand.NextDouble();
             double cur_z = (sample2*(max_z-min_z))+min_z;
-            print(cur_x);
-            print(cur_z);
+            //print(cur_x);
+//            print(cur_z);
             cube.GetComponent<Transform>().localPosition = new Vector3((float)cur_x,0,(float)cur_z);
             cube.GetComponent<Transform>().localScale = new Vector3(1.5f,1.5f,1.5f);
 
             // oldPosition.x = (float)cur_x;
             // oldPosition.z = (float)cur_z;
             // cube.GetComponent<Transform>().localPosition = oldPosition;
-            print(cube.GetComponent<Transform>().localPosition);
+            //print(cube.GetComponent<Transform>().localPosition);
             //cube.GetComponent<MeshRenderer>().enabled=false;
         }   
     }

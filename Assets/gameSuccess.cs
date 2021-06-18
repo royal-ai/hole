@@ -7,6 +7,8 @@ public class gameSuccess : MonoBehaviour
     // Start is called before the first frame update
     GameObject person;
     MoveBehaviour moveBehaviour;
+
+    public jumpsuccess j;
     void Start()
     {
         person = GameObject.Find("shadow");
@@ -18,6 +20,11 @@ public class gameSuccess : MonoBehaviour
     {
     }
     void OnTriggerEnter(Collider other){
-        moveBehaviour.GameMode = false;
+        if(moveBehaviour.GameMode)
+        {
+            moveBehaviour.GameMode = false;
+            j.success();
+        }
+        
     }
 }
