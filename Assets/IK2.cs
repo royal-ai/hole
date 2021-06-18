@@ -18,7 +18,7 @@ public class IK2 : MonoBehaviour
     private GameObject torch;
     void Start()
     {
-        lefthand = GameObject.Find("f_middle.01.L");
+        lefthand = GameObject.Find("LeftHandMiddle1");
         GameObject gameObject = GameObject.Find("Torch");
         gameObject.SetActive(false);
         torch = GameObject.Instantiate(gameObject);
