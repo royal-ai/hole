@@ -5,7 +5,7 @@ using UnityEngine;
 public class jumpButton : MonoBehaviour
 {
     public rockGenerate rocks;
-    public Vector3 personGamePos = new Vector3();
+    public Vector3 personGamePos = new Vector3();//临时的变量，但按下E键时赋值
     private GameObject startGame;
     private GameObject failGame;
     private GameObject person;
@@ -23,6 +23,7 @@ public class jumpButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //人复活
         if(moveBehaviour.GameMode && person.transform.position.y < -3.0f){
             person.transform.position = personGamePos;
             failGame.SetActive(true);
@@ -36,6 +37,7 @@ public class jumpButton : MonoBehaviour
         person.transform.position = personGamePos;
         moveBehaviour.GameMode = true;
         rocks.update_cube();
+        
     }
 
     public void exitClick(){
